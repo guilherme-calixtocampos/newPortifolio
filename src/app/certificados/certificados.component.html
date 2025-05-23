@@ -1,0 +1,19 @@
+<section class="py-5">
+  <div class="container">
+    <h1 class="text-center mb-5">Meus Certificados</h1>
+    <div class="row justify-content-center text-center">
+      
+      <div class="col-md-4 col-sm-6 mb-4 certif" *ngFor="let cert of certificados">
+        <div class="card shadow-sm card-hover">
+          <img [src]="cert.img" class="card-img-top" alt="{{ cert.titulo }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ cert.titulo }}</h5>
+            <p class="card-text">{{ cert.descricao }}</p>
+            <a [href]="cert.img" class="btn btn-primary" target="_blank">Ver Certificado</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
