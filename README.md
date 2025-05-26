@@ -1,59 +1,40 @@
-# Estudo
+# 💼 Guilherme Calixto Campos - Portfólio Profissional
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+Bem-vindo ao meu portfólio! Este projeto tem como objetivo apresentar minhas habilidades, experiências e projetos desenvolvidos ao longo da minha jornada na área de Tecnologia da Informação.
 
-## Development server
+🔗 **Acesse o projeto online:**  
+[https://meuportifolio-delta.vercel.app/home] 
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🖥️ Tecnologias Utilizadas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **HTML5** – Estrutura da página
+- **CSS3** – Estilização e responsividade
+- **TypeScript** - Funcionalidades interativas
+- **Bootstrap** – Componentes e layout responsivo
 
-## Code scaffolding
+### Atualizadas as telas home, certificados e sobre mim, foram inseridas algumas funções novas e designs diferentes, foi feito um ajuste para comportar o modo escuro e claro em todo o portifólio.
+Foi criada uma nova tela chamada " Projetos " com o intuito de trazer alguns dos últimos projetos desenvolvidos.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📸 Print do Projeto
 
-```bash
-ng generate --help
-```
+![image](https://github.com/user-attachments/assets/58d18455-495d-4d18-a93f-086df08338dc)
+![image](https://github.com/user-attachments/assets/82dc7280-e90c-49c5-ba05-ae5a445fd4a9)
+![image](https://github.com/user-attachments/assets/072a858b-0a9f-4e94-8112-f5e2bc9de330)
+![image](https://github.com/user-attachments/assets/1f740812-83df-4aa0-895c-8de43ddb7696)
+![image](https://github.com/user-attachments/assets/c1baf718-2331-49b2-b006-9db993c43461)
+![image](https://github.com/user-attachments/assets/7557f5d3-cd37-4721-80db-26fc3223028c)
+![image](https://github.com/user-attachments/assets/b39b9aaf-84cd-4a2b-af77-fcd9f91307af)
+![image](https://github.com/user-attachments/assets/7310a7bd-1fbc-4b1f-b891-9f94efaf09db)
 
-## Building
 
-To build the project run:
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
-```bash
-ng test
-```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
