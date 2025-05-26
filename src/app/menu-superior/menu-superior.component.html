@@ -1,5 +1,5 @@
 <header class="d-flex justify-content-center py-3">
-    <ul class="nav nav-pills">
+    <ul class="nav nav-pills gap-2">
         <li class="nav-item">
             <a routerLink="home" class="nav-link" routerLinkActive="active" aria-current="page">Home</a>
         </li>
@@ -9,5 +9,13 @@
         <li class="nav-item">
             <a routerLink="sobreMim" class="nav-link" routerLinkActive="active">Sobre Mim</a>
         </li>
+        <li class="nav-item">
+            <a routerLink="projetos" class="nav-link" routerLinkActive="active">Projetos</a>
+        </li>
+        <button class="btn btn-sm btn-outline-secondary float-end" (click)="toggleDarkMode()">
+        <i class="bi" [ngClass]="isDarkMode ? 'bi-sun' : 'bi-moon'"></i>
+        {{ isDarkMode ? 'Modo Claro' : 'Modo Escuro' }}
+        </button>
+
     </ul>
 </header>

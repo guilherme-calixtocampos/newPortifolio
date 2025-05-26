@@ -1,34 +1,11 @@
 
-<section class="bg-light text-center py-5">
-  <div class="container">
-    <h1 class="display-4">Bem-vindo ao meu portfólio</h1>
-    <a href="https://www.linkedin.com/in/guilherme-calixto-campos/" class="btn btn-primary btn-lg mt-3">Quero te conhecer melhor</a>
+<section class="bg-light d-flex flex-row p-5 justify-content-center align-items-center rounded-3">
+  <div class="container border-end">
+      <h1 class="display-4">Portifólio de Guilherme Calixto Campos</h1>
+      <p class="lead">Olá, me chamo Guilherme e te convido a conhecer um pouco mais sobre mim!</p>
+      <p class="lead">Sou estudante de Análise e Desenvolvimento de Sistemas com foco em se tornar desenvolvedor.</p>
   </div>
-  
-</section>
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5">Tecnologias e Nível de Domínio</h2>
-
-    <div class="row justify-content-center">
-      <div class="col-md-6 mb-4" *ngFor="let tech of tecnologias">
-        <div class="border rounded shadow-sm p-4 bg-white h-100">
-
-
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <strong class="fs-5">{{ tech.nome }}</strong>
-            <div>
-              <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
-                <i class="bi"
-                  [ngClass]="star <= tech.nivel ? 'bi-star-fill text-warning' : 'bi-star text-muted'"></i>
-              </ng-container>
-            </div>
-          </div>
-
-          <p class="text-muted mb-0">{{ tech.descricao }}</p>
-
-        </div>
-      </div>
-    </div>
+  <div>
+    <img src="assets/home-removebg-preview.png" alt="home" class="" />
   </div>
 </section>
