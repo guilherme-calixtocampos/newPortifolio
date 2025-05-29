@@ -5,7 +5,7 @@
       
       <div class="col-md-4 col-sm-6 mb-4 certif" *ngFor="let cert of certificados">
         <div class="card shadow-sm card-hover">
-          <img [src]="cert.img" class="card-img-top" alt="{{ cert.titulo }}">
+          <img [src]="cert.img" class="card-img-top img-fluid" alt="{{ cert.titulo }}">
           <div class="card-body bg-light rounded-2">
             <h5 class="card-title">{{ cert.titulo }}</h5>
             <p class="card-text">{{ cert.descricao }}</p>
