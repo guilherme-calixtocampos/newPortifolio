@@ -1,21 +1,57 @@
-<header class="d-flex justify-content-center  py-3">
-    <ul class="nav nav-pills gap-2 d-flex flex-wrap justify-content-center">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <!-- Marca / Home -->
+    <img src="assets/portifolio.png" alt="Logo" class="img-fluid" routerLink="home" style="height: 60px; width: auto;" (click)="closeMenu()">
+    <a class="px-3">Guilherme Calixto Campos</a>
+    <!-- Botão hambúrguer -->
+    <button class="navbar-toggler" type="button" (click)="menuOpen = !menuOpen">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu colapsável -->
+    <div [class.collapse]="!menuOpen" [class.show]="menuOpen" class="navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a routerLink="home" class="nav-link" routerLinkActive="active" aria-current="page">Home</a>
+          <a class="nav-link" routerLink="home" routerLinkActive="active" (click)="closeMenu()">
+            {{ home }}
+          </a>
         </li>
         <li class="nav-item">
-            <a routerLink="certificados" class="nav-link" routerLinkActive="active">Certificados</a>
+          <a class="nav-link" routerLink="certificados" routerLinkActive="active" (click)="closeMenu()">
+            {{ certificados }}
+          </a>
         </li>
         <li class="nav-item">
-            <a routerLink="sobreMim" class="nav-link" routerLinkActive="active">Sobre Mim</a>
+          <a class="nav-link" routerLink="sobreMim" routerLinkActive="active" (click)="closeMenu()">
+            {{ sobreMim }}
+          </a>
         </li>
         <li class="nav-item">
-            <a routerLink="projetos" class="nav-link" routerLinkActive="active">Projetos</a>
+          <a class="nav-link" routerLink="projetos" routerLinkActive="active" (click)="closeMenu()">
+            {{ projetos }}
+          </a>
         </li>
-        <button class="btn btn-sm btn-outline-secondary float-end" (click)="toggleDarkMode()">
-        <i class="bi" [ngClass]="isDarkMode ? 'bi-sun' : 'bi-moon'"></i>
-        {{ isDarkMode ? 'Modo Claro' : 'Modo Escuro' }}
+      </ul>
+
+      <div class="d-flex align-items-center">
+        <!-- Botão de Dark Mode -->
+        <button class="btn btn-outline-secondary btn-sm me-2" (click)="toggleDarkMode()">
+          <i class="bi" [ngClass]="isDarkMode ? 'bi-sun' : 'bi-moon'"></i>
+          {{ isDarkMode ? 'Modo Claro' : 'Modo Escuro' }}
         </button>
 
-    </ul>
-</header>
+        <!-- Seletor de idioma -->
+        <select
+          id="idioma"
+          class="form-select form-select-sm bg-light"
+          [(ngModel)]="idiomaSelecionado"
+          (change)="trocarIdioma(idiomaSelecionado)"
+        >
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</nav>

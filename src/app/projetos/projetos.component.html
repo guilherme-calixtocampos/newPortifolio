@@ -1,12 +1,14 @@
 <div class="mb-4 bg-light p-4 rounded-3 shadow-sm">
-  <h2 class="text-center text-primary mb-3">Projetos</h2>
-  <p class="text-center text-muted">
-    Aqui estão alguns dos meus projetos mais recentes, desenvolvidos com diversas tecnologias.
-    Você pode filtrar por tecnologia para encontrar o que mais lhe interessa.
-  <label for="filtro" class="form-label">Filtrar por tecnologia:</label>
-  <select id="filtro" class="form-select bg-white border rounded-2 shadow-sm bg-light" [(ngModel)]="tecnologiaSelecionada">
-    <option value="">Todas</option>
-    <option *ngFor="let tech of tecnologiasDisponiveis" [value]="tech">{{ tech }}</option>
+  <h2 class="text-center text-primary mb-3">{{ titulo }}</h2>
+  <p class="text-center text-muted">{{ descricao }}</p>
+  <label for="filtro" class="form-label">{{ filtroPlaceholder }}:</label>
+  <select id="filtro"
+          class="form-select bg-white border rounded-2 shadow-sm bg-light mb-5"
+          [(ngModel)]="tecnologiaSelecionada">
+    <option value="">{{ filtroPlaceholder }}</option>
+    <option *ngFor="let tech of tecnologiasDisponiveis" [value]="tech">
+      {{ tecnologiaNomes[tech] || tech }}
+    </option>
   </select>
 </div>
 
@@ -16,15 +18,13 @@
       <div class="card-body">
         <h5 class="card-title text-primary fw-bold">{{ projeto.nome }}</h5>
         <p class="card-text text-muted">{{ projeto.descricao }}</p>
-
         <div class="mb-3">
           <span *ngFor="let tech of projeto.tecnologias" class="badge bg-secondary me-1">
-            {{ tech }}
+            {{ tecnologiaNomes[tech] || tech }}
           </span>
         </div>
-
         <a [href]="projeto.link" class="btn btn-outline-primary btn-sm" target="_blank">
-          Ver Projeto <i class="bi bi-box-arrow-up-right ms-1"></i>
+          {{ botaoVer }} <i class="bi bi-box-arrow-up-right ms-1"></i>
         </a>
       </div>
     </div>

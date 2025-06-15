@@ -1,6 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TraducaoService } from '../api-traducao/services/traducao.service';
+
+interface Projeto {
+  nome: string;
+  descricao: string;
+  tecnologias: string[];
+  link: string;
+}
 
 @Component({
   selector: 'app-projetos',
@@ -12,59 +20,39 @@ import { FormsModule } from '@angular/forms';
 export class ProjetosComponent {
   tecnologiaSelecionada: string = '';
 
-  projetos = [
-    {
-      nome: 'Fetch API',
-      descricao: 'Exemplo de uso da Fetch API utilizado em sala de aula',
-      tecnologias: ['JavaScript', 'Node.js'],
-      link: 'https://github.com/guilherme-calixtocampos/fetch'
-    },
-    {
-      nome: 'DOM Manipulation',
-      descricao: 'Exemplo de manipulação do DOM com JavaScript',
-      tecnologias: ['JavaScript'],
-      link: 'https://github.com/guilherme-calixtocampos/fetch'
-    },
-    {
-      nome: 'APP para cadastro de treino e execução',
-      descricao: 'Desenvolvido app para cadastro de treino e execução do mesmo no aplicativo, com timer e notificações informando início e fim do treino',
-      tecnologias: ['Java'],
-      link: 'Desenvolvido app para cadastro de treino e execução do mesmo no aplicativo, com timer e notificações informando início e fim do treino'
-    },
-    {
-      nome: 'Água Insights',
-      descricao: 'Site com intuito de conscientizar o público infantil e jovem sobre a poluição e sobre o gasto de água',
-      tecnologias: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://github.com/guilherme-calixtocampos/Agua-Insights'
-    },
-    {
-      nome: 'Locadora',
-      descricao: 'Desenvolvido sistema para locadoras, este programa tem como foco ajudar nos estudos e botar em prática o que venho aprendendo',
-      tecnologias: ['Java'],
-      link: 'https://github.com/guilherme-calixtocampos/Locadora'
-    },
-    {
-      nome: 'Tela simples usando bootstrap',
-      descricao: 'Tela simples usando bootstrap com intuíto de praticar o que aprendi',
-      tecnologias: ['HTML', 'Bootstrap'],
-      link: 'https://github.com/guilherme-calixtocampos/TelaBootstrap'
-    },
-    {
-      nome: 'Portifolio',
-      descricao: 'Desenvolvido e pensado em tudo que aprendi durando meu curso de Análise e Desenvolvimento de Sistemas, este portfólio tem como objetivo mostrar o que aprendi e o que venho aprendendo',
-      tecnologias: ['Angular', 'HTML', 'CSS', 'TypeScript', 'Bootstrap'],
-      link: 'https://github.com/guilherme-calixtocampos/newPortifolio'
-    }
-  ];
+  // Textos e dados traduzidos
+  titulo = '';
+  descricao = '';
+  filtroPlaceholder = '';
+  botaoVer = '';
+  tecnologiasDisponiveis: string[] = [];
+  tecnologiaNomes: { [key: string]: string } = {};
+  projetos: Projeto[] = [];
 
-  tecnologiasDisponiveis = ['Angular', 'HTML', 'CSS', 'JavaScript', 'Java', 'TypeScript', 'Bootstrap', 'Node.js'];
+  constructor(private traducaoService: TraducaoService) {}
 
-  projetosFiltrados() {
-    if (!this.tecnologiaSelecionada) {
-      return this.projetos;
-    }
-    return this.projetos.filter(projeto =>
-      projeto.tecnologias.includes(this.tecnologiaSelecionada)
+  ngOnInit() {
+    this.traducaoService.traducoes$.subscribe(trad => {
+      if (trad) {
+        this.titulo = trad.tituloProjetos;
+        this.descricao = trad.descricaoProjetos;
+        this.filtroPlaceholder = trad.filtroPlaceholder;
+        this.botaoVer = trad.botaoVerProjeto;
+        this.tecnologiasDisponiveis = trad.tecnologiasDisponiveis;
+        this.tecnologiaNomes = trad.tecnologiaNomes;
+        this.projetos = trad.projetos_items;
+      }
+    });
+
+    // chama a primeira tradução, se necessário
+    const lang = localStorage.getItem('lang') || 'pt';
+    this.traducaoService.traduzir(lang).subscribe();
+  }
+
+  projetosFiltrados(): Projeto[] {
+    if (!this.tecnologiaSelecionada) return this.projetos;
+    return this.projetos.filter(p =>
+      p.tecnologias.includes(this.tecnologiaSelecionada)
     );
   }
 }
