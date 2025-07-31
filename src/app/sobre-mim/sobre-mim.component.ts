@@ -16,14 +16,17 @@ export class SobreMimComponent {
     { image: "" ,nome: 'Tailwind', descricao: 'Framework CSS utilitário que permite construir interfaces com rapidez.', nivel: 5 },
     { image: "" ,nome: 'SaSS', descricao: 'Pré-processador CSS que facilita a escrita de estilos mais organizados.', nivel: 4 },
     { image: "" ,nome: 'Bootstrap', descricao: 'Framework CSS com componentes prontos e responsivos para web.', nivel: 4 },
-    { image: "" ,nome: 'JavaScript', descricao: 'Linguagem de programação que traz interatividade às páginas web.', nivel: 3 }
+    { image: "" ,nome: 'JavaScript', descricao: 'Linguagem de programação que traz interatividade às páginas web.', nivel: 3 },
+    { image: "" ,nome: 'TypeScript', descricao: 'Linguagem de programação que traz interatividade às páginas web.', nivel: 3 },
+    { image: "" ,nome: 'Node.JS', descricao: 'Linguagem de programação que traz interatividade às páginas web.', nivel: 3 },
+    { image: "" ,nome: 'Java', descricao: 'Linguagem de programação que traz interatividade às páginas web.', nivel: 3 }
   ];
 
   infraestruturas = [
   { nome: "Redes", descricao: "Conhecimento básico em redes de computadores, incluindo protocolos e topologias.", nivel: 3 },
   {nome: "Helpdesk", descricao: "Experiência em suporte técnico e resolução de problemas de hardware e software.", nivel: 5},
   {nome: "Hardware", descricao: "Conhecimento em montagem e manutenção de computadores e periféricos.", nivel: 4},
-  {nome: "Sistemas Operacionais", descricao: "Experiência com Windows e Linux, incluindo instalação e configuração.", nivel: 4},
+  {nome: "Sistemas Operacionais (Windows e Linux)", descricao: "Experiência com Windows e Linux, incluindo instalação e configuração.", nivel: 4},
   {nome: "CFTV", descricao: "Conhecimento em instalação e configuração de sistemas de câmeras de segurança.", nivel: 2},
   {nome: "No-Break", descricao: "Experiência em instalação e manutenção de sistemas de energia ininterrupta.", nivel: 3}
 ]
