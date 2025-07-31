@@ -1,14 +1,21 @@
-💼 Guilherme Calixto Campos - Portfólio Profissional
+# 💼 Guilherme Calixto Campos - Portfólio Profissional
+
 Bem-vindo ao meu portfólio! Este projeto tem como objetivo apresentar minhas habilidades, experiências e projetos desenvolvidos ao longo da minha jornada na área de Tecnologia da Informação.
 
-🔗 Acesse o projeto online:
-[https://meuportifolio-delta.vercel.app/home]
+🔗 **Acesse o projeto online:**  
+[https://meuportifolio-delta.vercel.app/home] 
 
-🖥️ Tecnologias Utilizadas
-HTML5 – Estrutura da página
-CSS3 – Estilização e responsividade
-TypeScript - Funcionalidades interativas
-Bootstrap – Componentes e layout responsivo
+---
+
+## 🖥️ Tecnologias Utilizadas
+
+- **HTML5** – Estrutura da página
+- **CSS3** – Estilização e responsividade
+- **TypeScript** - Funcionalidades interativas
+- **Bootstrap** – Componentes e layout responsivo
+
+
+---
 
 📸 Print do Projeto
 <img width="1779" height="908" alt="image" src="https://github.com/user-attachments/assets/ad238574-224d-433c-98b2-1b5a4a814c83" />
