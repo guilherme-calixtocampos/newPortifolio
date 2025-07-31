@@ -1,59 +1,18 @@
-# Estudo
+💼 Guilherme Calixto Campos - Portfólio Profissional
+Bem-vindo ao meu portfólio! Este projeto tem como objetivo apresentar minhas habilidades, experiências e projetos desenvolvidos ao longo da minha jornada na área de Tecnologia da Informação.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+🔗 Acesse o projeto online:
+[https://meuportifolio-delta.vercel.app/home]
 
-## Development server
+🖥️ Tecnologias Utilizadas
+HTML5 – Estrutura da página
+CSS3 – Estilização e responsividade
+TypeScript - Funcionalidades interativas
+Bootstrap – Componentes e layout responsivo
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+📸 Print do Projeto
+<img width="1779" height="908" alt="image" src="https://github.com/user-attachments/assets/ad238574-224d-433c-98b2-1b5a4a814c83" />
+<img width="1762" height="905" alt="image" src="https://github.com/user-attachments/assets/bde55cb7-ecf4-4a90-8f8f-637d586a258d" />
+<img width="1756" height="900" alt="image" src="https://github.com/user-attachments/assets/d80603d2-2698-4d4a-93fa-866ff66b78d9" />
+<img width="1772" height="903" alt="image" src="https://github.com/user-attachments/assets/2ddb1a1b-06cb-412d-9624-24d9977a8266" />
+<img width="1763" height="896" alt="image" src="https://github.com/user-attachments/assets/f0272533-e9c9-4fbb-957e-a9990b4f3cb1" />
